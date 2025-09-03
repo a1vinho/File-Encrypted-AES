@@ -38,9 +38,8 @@ encryptedData(strings).then(r => {
 - - Quando rodamos o código anterior ou a função ***EncryptedDataAES*** a chave (privateKey) e o vetor de inicialização (IV) é salvo em um arquivo .json,por boas pratícas e uma facil manipulação.Toda vez que rodamos a função anterior,privateKey e o IV,são alterados,isso significa que se você criptografou mais de uma vez algum arquivo ou contéudo e deseja descriptografa novamente.Isso não irá funciona mais,por que o IV e o privateKey são toltamente diferentes da criptografia anterior.
   - Caso isso acabe se tornando um problema para você,você pode criar uma forma melhor e mais aprimorada para armazenamento da chave privada e do vetor de inicialização,como o armazenamento em ***NoSQL***(redis,mongodb e etc...)
  
-  - ```typescript
-
-    import aes from "./scripts/aes";
+```typescript
+import aes from "./scripts/aes";
 
 function DefineTypeArray<Type>(arr: Array<Type>): Array<Type> {
     return arr;
@@ -61,6 +60,8 @@ async function dencryptedData(data: Array<string>): Promise<Array<Buffer | Array
 dencryptedData(strings).then(r => {
     console.log(r.toString());
 });
+
+  
 ```
 
 # Todos os direitos reservados.
